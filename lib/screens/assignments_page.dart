@@ -395,7 +395,7 @@ class _AssignmentsPageState extends State<AssignmentsPage> {
                   QuerySnapshot<Map<String, dynamic>>,
                   QuerySnapshot<Map<String, dynamic>>,
                   List<QueryDocumentSnapshot<Map<String, dynamic>>>>(
-                // Stream A → groups created by current user
+                // Stream A → groups created by current user for THIS course
                 FirebaseFirestore.instance
                     .collection('groups')
                     .where('createdBy',

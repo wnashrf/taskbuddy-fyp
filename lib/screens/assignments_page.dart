@@ -398,18 +398,18 @@ class _AssignmentsPageState extends State<AssignmentsPage> {
                 // Stream A → groups created by current user for THIS course
                 FirebaseFirestore.instance
                     .collection('groups')
-                    .where('createdBy',
-                    isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+                    .where('createdBy', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+                    .where('courseId', isEqualTo: widget.courseId)     // ← ADDED
                     .snapshots(),
 
-                // Stream B → groups where user is a member
+                // Stream B → groups where user is a member for THIS course
                 FirebaseFirestore.instance
                     .collection('groups')
-                    .where('members',
-                    arrayContains: FirebaseAuth.instance.currentUser!.uid)
+                    .where('members', arrayContains: FirebaseAuth.instance.currentUser!.uid)
+                    .where('courseId', isEqualTo: widget.courseId)     // ← ADDED
                     .snapshots(),
 
-                    (createdBySnap, memberSnap) {
+                (createdBySnap, memberSnap) {
                   final createdDocs = createdBySnap.docs;
                   final memberDocs = memberSnap.docs;
 

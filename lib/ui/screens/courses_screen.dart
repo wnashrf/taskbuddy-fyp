@@ -5,7 +5,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
-import '../services/firestore_service.dart';
+import '../../data/services/firestore_service.dart';
 import 'assignments_page.dart'; // we'll create this next
 
 class CoursesScreen extends StatelessWidget {

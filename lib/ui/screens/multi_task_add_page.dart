@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../services/ai_split_service.dart';
+import '../../data/services/ai_split_service.dart';
 
 class MultiTaskAddPage extends StatefulWidget {
   final String questionId;

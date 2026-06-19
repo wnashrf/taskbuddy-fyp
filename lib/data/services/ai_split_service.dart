@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import '../../core/constants/api_constants.dart';
 
 /// Handles communication with Google Gemini API to fairly divide a question
 /// into N subtasks (no member assignment).
@@ -7,10 +9,8 @@ class AISplitService {
   AISplitService._();
   static final instance = AISplitService._();
 
-  // TODO: Replace with your real Gemini API key from https://aistudio.google.com/app/apikey
-  static const _apiKey = 'AIzaSyA6TAw8Hr3wO2uvl_8VtpwSSXd5EL-BJ2g';
-  static const _endpoint =
-      'https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent';
+  static String get _apiKey => dotenv.env['GEMINI_API_KEY'] ?? '';
+  static const _endpoint = ApiConstants.geminiEndpoint;
 
   /// Splits a question into [memberCount] fair subtasks.
   Future<List<Map<String, dynamic>>> splitIntoTasks({

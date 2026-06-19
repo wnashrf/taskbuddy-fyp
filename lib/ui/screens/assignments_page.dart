@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rxdart/rxdart.dart';
 
-import '../services/user_service.dart';
-import '../services/firestore_service.dart';
+import '../../data/services/user_service.dart';
+import '../../data/services/firestore_service.dart';
 import 'tasks_page.dart';
 
 class AssignmentsPage extends StatefulWidget {

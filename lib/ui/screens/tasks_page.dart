@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'multi_task_add_page.dart';
 import 'task_detail_page.dart';
 import 'group_activity_page.dart';
@@ -15,7 +16,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 import 'dart:typed_data';
 import 'package:pdfx/pdfx.dart';
 
-const String _geminiApiKey = 'AIzaSyA6TAw8Hr3wO2uvl_8VtpwSSXd5EL-BJ2g';
+String get _geminiApiKey => dotenv.env['GEMINI_API_KEY'] ?? '';
 
 class TasksPage extends StatefulWidget {
   final String courseId;

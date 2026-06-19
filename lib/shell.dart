@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 // Relative imports are safer regardless of the pubspec name.
-import 'screens/home_screen.dart';
-import 'screens/calendar_screen.dart';
-import 'screens/courses_screen.dart';
-import 'screens/profile_screen.dart';
+import 'ui/screens/home_screen.dart';
+import 'ui/screens/calendar_screen.dart';
+import 'ui/screens/courses_screen.dart';
+import 'ui/screens/profile_screen.dart';
 
 class Shell extends StatefulWidget {
   const Shell({super.key});

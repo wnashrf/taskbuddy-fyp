@@ -10,6 +10,7 @@ TaskBuddy is a collaborative task management application built with Flutter and 
 - **File Attachments**: Upload and manage project-related documents and images using Firebase Storage.
 - **Individual & Group Modes**: Support for both personal study tasks and collaborative group projects.
 - **Activity Logs**: Track group progress and contributions with a detailed activity feed.
+- **Centralized Theming**: Consistent UI across the app using a managed global theme.
 
 ## 📂 Project Structure
 
@@ -51,7 +52,7 @@ lib/
    ```
 
 3. **Configure Environment Variables:**
-   Create a `.env` file in the root directory:
+   Create a `.env` file in the `assets/` directory:
    ```env
    GEMINI_API_KEY=your_api_key_here
    ```

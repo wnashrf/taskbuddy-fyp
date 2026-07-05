@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
-// Relative imports are safer regardless of the pubspec name.
-import 'ui/screens/home_screen.dart';
-import 'ui/screens/calendar_screen.dart';
-import 'ui/screens/courses_screen.dart';
-import 'ui/screens/profile_screen.dart';
+import 'package:taskbuddy_testing01/ui/screens/home_screen.dart';
+import 'package:taskbuddy_testing01/ui/screens/calendar_screen.dart';
+import 'package:taskbuddy_testing01/ui/screens/courses_screen.dart';
+import 'package:taskbuddy_testing01/ui/screens/profile_screen.dart';
 
 class Shell extends StatefulWidget {
   const Shell({super.key});

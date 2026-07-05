@@ -1,4 +1,7 @@
+# Local environment
 .env
+assets/.env
+*.env
 
 # Miscellaneous
 *.class
